@@ -7,8 +7,7 @@ def parse_input_into_2d_list():
     return visitors
 
 
-def main():
-    visitors = parse_input_into_2d_list()
+def light_hours(visitors):
     total_hours = 0
     number_in_room = 0
     for hour in range(0, 24):
@@ -19,8 +18,8 @@ def main():
                 number_in_room -= 1
         if number_in_room > 0:
             total_hours += 1
-    print(total_hours)
+    return total_hours
 
 
-if __name__ == "__main__":
-    main()
+visitors = parse_input_into_2d_list()
+light_hours(visitors)
